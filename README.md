@@ -1,5 +1,6 @@
-# Fitness Tracker App
 
+
+# Fitness Tracker App
 
 *Project Title:* 
 
@@ -66,5 +67,43 @@ _Sample Workflows:_
 	2.	Clicks "Add Workout" → Fills title, category, duration, date → Clicks Save.
 	3.	Navigates to BMI Page → Enters weight and height → BMI is shown.
 	4.	Clicks “Summary” → Sees workout stats.
+ 
+
+## Output Screen
+
+#### Home Screen without any records
+
+![Screenshot 2025-06-11 202149](https://github.com/user-attachments/assets/60586241-ece8-455e-8b3c-5d023dbf3dcd)
+
+#### Add New Workout Dialog Box 
+
+![Screenshot 2025-06-11 202220](https://github.com/user-attachments/assets/49a60bf8-2c69-434b-8550-c67d820b5052)
+
+#### Choosing Category on Dialog Box
+
+![Screenshot 2025-06-11 202408](https://github.com/user-attachments/assets/dbe45094-c0f6-4408-ab9a-4f1d9d65a308)
+
+#### Choosing Date on Dialog Box
+
+![Screenshot 2025-06-11 202429](https://github.com/user-attachments/assets/b05e8aa5-4a1f-4059-a7bd-643e2841deb4)
+
+#### List of entered Workouts
+
+![Screenshot 2025-06-11 202703](https://github.com/user-attachments/assets/596ee4c5-ab36-47ca-8b7f-7eb4cf853d06)
+
+#### Summary Screen showing chart and stats acoording to the category
+
+![Screenshot 2025-06-11 202748](https://github.com/user-attachments/assets/187e79f2-b2ba-4a6e-9204-936e7c9ac77b)
+
+#### BMI Calculator Screen
+
+![Screenshot 2025-06-11 202821](https://github.com/user-attachments/assets/6662d388-7655-4b37-99bc-5ab80859c85c)
+
+
+#### Calculated BMI and status shown
+
+![Screenshot 2025-06-11 203215](https://github.com/user-attachments/assets/83bb23e1-95a3-43a9-8ce8-376a2404c3b4)
+
+
 
 
