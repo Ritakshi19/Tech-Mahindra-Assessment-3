@@ -1,5 +1,4 @@
 import 'package:fitness_tracker/Models/workout.dart';
-import 'package:fitness_tracker/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_tracker/widgets/summary_chart.dart';
 
