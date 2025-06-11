@@ -10,7 +10,7 @@ class WorkoutCard extends StatelessWidget{
   Widget build(BuildContext context) {
     return Card(
       elevation: 10,
-      color:  Color.fromARGB(193, 226, 66, 17),
+      color:  Color.fromARGB(255, 236, 83, 12),
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: Padding(
         padding: const EdgeInsets.all(16.0),

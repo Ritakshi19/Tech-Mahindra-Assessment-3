@@ -97,7 +97,7 @@ class _BmiScreenState extends State<BmiScreen> {
                 foregroundColor: Colors.white,
               ),
               onPressed: calculateBMIButton,
-              child: Text("Calculate"),
+              child: Text("Calculate",style: TextStyle(fontSize: 20),),
             ),
             SizedBox(height: 20),
             if (bmi > 0)

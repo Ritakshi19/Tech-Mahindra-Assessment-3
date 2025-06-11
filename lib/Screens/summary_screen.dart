@@ -1,10 +1,17 @@
+import 'package:fitness_tracker/Models/workout.dart';
+import 'package:fitness_tracker/Screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:fitness_tracker/widgets/summary_chart.dart';
 
 class SummaryScreen extends StatelessWidget {
   final Map<String, int> summary;
+  List<Workout> registeredWorkouts;
 
-  const SummaryScreen({super.key, required this.summary});
+  SummaryScreen({
+    super.key,
+    required this.summary,
+    required this.registeredWorkouts,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -20,51 +27,55 @@ class SummaryScreen extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          children: [
-            const Text(
-              'Workouts by Category',
-              style: TextStyle(
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
-                color: Color.fromARGB(255, 200, 2, 48),
-              ),
-            ),
-            const SizedBox(height: 20),
-            SummaryChart(summary: summary),
-            const SizedBox(height: 30),
-            ...summary.entries.map((entry) {
-              return Card(
-                shape: Border.all(color: Color.fromARGB(255, 226, 66, 17)),
-                child: Padding(
-                  padding: const EdgeInsets.all(14.0),
-                  child: Row(
+        padding: const EdgeInsets.all(18.0),
+        child:
+            registeredWorkouts.isEmpty
+                ? Center(
+                  child: Image.asset(
+                    "assets/images/norecord.png",
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                )
+                : Container(
+                  child: Column(
                     children: [
-                      Text(
-                        entry.key,
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Color.fromARGB(255, 226, 66, 17),
-                        ),
-                      ),
-                      const Spacer(),
-                      Text(
-                        entry.value.toString(),
-                        style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.w600,
-                          color: Color.fromARGB(255, 226, 66, 17),
-                        ),
-                      ),
+                      SummaryChart(summary: summary),
+                      const SizedBox(height: 30),
+                      ...summary.entries.map((entry) {
+                        return Card(
+                          shape: Border.all(
+                            color: Color.fromARGB(255, 236, 83, 12),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(14.0),
+                            child: Row(
+                              children: [
+                                Text(
+                                  entry.key,
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color.fromARGB(255, 236, 83, 12),
+                                  ),
+                                ),
+                                const Spacer(),
+                                Text(
+                                  entry.value.toString(),
+                                  style: TextStyle(
+                                    fontSize: 20,
+                                    fontWeight: FontWeight.w600,
+                                    color: Color.fromARGB(255, 236, 83, 12),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        );
+                      }).toList(),
                     ],
                   ),
                 ),
-              );
-            }).toList(),
-          ],
-        ),
       ),
     );
   }

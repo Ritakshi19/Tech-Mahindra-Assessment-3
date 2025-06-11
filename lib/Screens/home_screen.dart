@@ -12,12 +12,12 @@ class HomeScreen extends StatefulWidget {
 
 class _HomeScreenState extends State<HomeScreen> {
   final List<Workout> registeredWorkouts = [
-    Workout(
-      date: DateTime.now(),
-      duration: 20,
-      title: "Jumping jacks",
-      workoutCategory: WorkoutCategory.cardio,
-    ),
+    // Workout(
+    //   date: DateTime.now(),
+    //   duration: 20,
+    //   title: "Jumping jacks",
+    //   workoutCategory: WorkoutCategory.cardio,
+    // ),
   ];
 
   //Adding workout in the list of workouts
@@ -68,7 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 context,
                 MaterialPageRoute(
                   builder:
-                      (context) => SummaryScreen(summary: getWorkoutSummary()),
+                      (context) => SummaryScreen(summary: getWorkoutSummary(), registeredWorkouts: registeredWorkouts,),
                 ),
               );
             },
@@ -88,14 +88,15 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
         ],
       ),
-      body:
+      body:Container(color: Colors.white ,
+      
+      child:
           //if there are no workouts to show then use image
           registeredWorkouts.isEmpty
               ? Center(
                 child: Image.asset(
                   "assets/images/norecord.png",
                   width: double.infinity,
-
                   fit: BoxFit.cover,
                 ),
               )
@@ -105,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 itemBuilder: (context, index) {
                   return WorkoutCard(workout: registeredWorkouts[index]);
                 },
-              ),
+              )),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color.fromARGB(255, 2, 95, 171),
         foregroundColor: Colors.white,
